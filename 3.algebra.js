@@ -135,3 +135,28 @@ function factorization(number) {
 }
 
 console.log('factorization', factorization(4294967297).join(', '));
+
+
+
+function fibonacci(n) {
+    if(n < 2) {
+        return 1;
+    } else {
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
+}
+
+function fibonacci2(n) {
+    let a = 1;
+    let b = 1;
+    let res = 0;
+    for(let index = 2; index<=n; index++) {
+        res = a + b;
+        a = b;
+        b = res;
+    }
+    return res;
+}
+
+console.log(fibonacci(15));
+console.log(fibonacci2(15));
